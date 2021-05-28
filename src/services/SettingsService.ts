@@ -1,4 +1,5 @@
 import { getCustomRepository } from "typeorm";
+
 import { SettingsRepositories } from "../repositories/SettingsRepository";
 
 interface ISettingsCreate {
@@ -17,8 +18,8 @@ class SettingsService {
     }
 
     const settings = settingsRepository.create({ chat, username });
-
     await settingsRepository.save(settings);
+
     return settings;
   }
 }
