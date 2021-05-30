@@ -1,14 +1,7 @@
-import { Request, Response } from "express";
-import { MessageRepository } from "../repositories/MessagesRepository";
-import { MessagesService } from "../services/MessagesService";
+import { Request, Response } from 'express';
+import { MessagesService } from '../services/MessagesService';
 
 class MessagesController {
-  // private messagesService: MessagesService;
-
-  // constructor() {
-  //   this.messagesService = new MessagesService();
-  // }
-
   async create(request: Request, response: Response): Promise<Response> {
     const { admin_id, text, user_id } = request.body;
 
